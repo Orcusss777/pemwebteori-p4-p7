@@ -26,22 +26,33 @@ if (isset($_POST['update'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <title>Edit Produk</title>
 </head>
 <body>
-    <h1>Edit Produk</h1>
-    <form method="post">
-        <label>Nama Produk:</label>
-        <input type="text" name="name" value="<?= $row['name']; ?>" required><br><br>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Edit Produk</h1>
+        <form method="post" class="p-4 border rounded shadow-sm">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nama Produk</label>
+                <input type="text" name="name" id="name" class="form-control" value="<?= htmlspecialchars($row['name']); ?>" required>
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Harga</label>
+                <input type="number" name="price" id="price" class="form-control" value="<?= htmlspecialchars($row['price']); ?>" required>
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Gambar URL</label>
+                <input type="text" name="image" id="image" class="form-control" value="<?= htmlspecialchars($row['image']); ?>">
+            </div>
+            <div class="text-center">
+                <button type="submit" name="update" class="btn btn-primary btn-lg">Update</button>
+                <a href="index.php" class="btn btn-secondary btn-lg">Kembali ke Data Produk</a>
+            </div>
+        </form>
+    </div>
 
-        <label>Harga:</label>
-        <input type="text" name="price" value="<?= $row['price']; ?>" required><br><br>
-
-        <label>Gambar URL:</label>
-        <input type="text" name="image" value="<?= $row['image']; ?>"><br><br>
-
-        <button type="submit" name="update">Update</button>
-    </form>
-    <a href="index.php">Kembali ke Data Produk</a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
