@@ -14,7 +14,7 @@
     </form>
 
     <a href="register.php">
-        <p>Register</p>
+        <p>Regist Akun</p>
     </a>
 
 </body>

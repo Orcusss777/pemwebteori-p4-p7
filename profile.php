@@ -7,5 +7,6 @@
 </head>
 <body>
     <h1>Selamat datang admin</h1>
+    <a href="create.php">Tambah Data</a>
 </body>
 </html>

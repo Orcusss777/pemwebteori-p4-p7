@@ -46,8 +46,8 @@ if (isset($_POST['submit'])) {
                 exit;
             }
              else {
-                echo "Redirecting to user.php...";
-                header('Location: ../user.php');
+                // Jika Bukan Admin
+                echo "Anda Bukan Admin";
                 exit;
             }
             
